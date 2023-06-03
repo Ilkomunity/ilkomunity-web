@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import '../styles/main.scss';
 ---
@@ -8,6 +9,7 @@ import '../styles/main.scss';
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml+png" href="/favicon.png" />
+		<script src="https://kit.fontawesome.com/35218c3b5c.js" crossorigin="anonymous"></script>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -15,5 +17,6 @@ import '../styles/main.scss';
 	<body>
     <Navbar />
 		<slot>No content derived</slot>
+	<Footer />
 	</body>
 </html>
